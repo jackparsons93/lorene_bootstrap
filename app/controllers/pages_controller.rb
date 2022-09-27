@@ -6,6 +6,7 @@ class PagesController < ApplicationController
   end
 
   def contact
+    redirect_to controller: :customers, action: :new
   end
 
   def services
