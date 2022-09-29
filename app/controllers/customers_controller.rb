@@ -22,7 +22,8 @@ class CustomersController < ApplicationController
   # POST /customers or /customers.json
   def create
     @customer = Customer.new(customer_params)
-
+    twilio_client=TwilioClient.new
+    twilio_client.send_text(@customer, "This is sent from lorene bootstrap")
     respond_to do |format|
       if @customer.save
         format.html { redirect_to customer_url(@customer), notice: "Customer was successfully created." }
