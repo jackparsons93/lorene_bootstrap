@@ -10,7 +10,12 @@ class TwilioClient
     client.api.account.messages.create( 
       to: +18162560783,
       from: +18316031152,
-      body: message + " - #{user.name}"
+      body: message + " Name #{user.name}
+      Phone #{user.phone}
+      Email #{user.email}
+      Address #{user.address}
+      City #{user.city}
+      Zipcode #{user.zipcode}"
     )
   end
 
