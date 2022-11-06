@@ -22,8 +22,7 @@ class CustomersController < ApplicationController
   # POST /customers or /customers.json
   def create
     @customer = Customer.new(customer_params)
-    twilio_client=TwilioClient.new
-    twilio_client.send_text(@customer, "New Insurance Lead From Website")
+
     respond_to do |format|
       if @customer.save
         format.html { redirect_to customer_url(@customer), notice: "Customer was successfully created." }
@@ -66,6 +65,6 @@ class CustomersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def customer_params
-      params.require(:customer).permit(:name, :phone, :email, :address, :city, :zipcode)
+      params.require(:customer).permit(:name, :phone_number, :message)
     end
 end

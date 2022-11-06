@@ -2,16 +2,10 @@
 
 one:
   name: MyString
-  phone: MyString
-  email: MyString
-  address: MyString
-  city: MyString
-  zipcode: MyString
+  phone_number: MyString
+  message: MyText
 
 two:
   name: MyString
-  phone: MyString
-  email: MyString
-  address: MyString
-  city: MyString
-  zipcode: MyString
+  phone_number: MyString
+  message: MyText
